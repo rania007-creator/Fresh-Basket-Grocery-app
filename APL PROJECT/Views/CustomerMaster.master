@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustomerMaster.master.cs" Inherits="Views_CustomerMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title> Grocery Store</title>
+    <!--bootstrap stylesheet cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!--font cdn-->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/StyleSheet.css" runat="server" />
+
+         
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-success">
+                 <div class="container-fluid">
+                    <a class="navbar-brand" href="/home.aspx">
+                        Online Grocery Store
+
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse flex-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item navbar-subcontainer ">
+                               <a class="nav-link"  href="Default.aspx">Home</a>
+                           </li>                           
+
+                           <li class="nav-item navbar-subcontainer">
+                               <a class="nav-link"  href="Products.aspx">Products</a>
+                           </li>
+
+                           <li class="nav-item navbar-subcontainer">
+                               <a class="nav-link"  href="Cart.aspx">Cart</a>
+                           </li>
+
+                            <li class="nav-item navbar-subcontainer">
+                               <a class="nav-link"  href="MyOrders.aspx">MyOrders</a>
+
+                           </li>
+
+                            <li class="nav-item navbar-subcontainer">
+                               <a class="nav-link"  href="CheckOut.aspx">CheckOut</a>
+
+                           </li>
+
+                           <li class="nav-item navbar-subcontainer">
+                               <a class="nav-link"  href="../Login.aspx">LogOut</a>
+                           </li>
+                                                                               
+                      </ul>
+                
+           </div>
+  </div>
+</nav>
+        </header>
+
+        <main>
+            <div class="container mt-4">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        </main>
+        <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 pt-4 pb-3">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>About Us</h5>
+            <p>We provide fresh groceries delivered to your door. Quality, affordability, and convenience—your trusted grocery partner.</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="#categories" class="text-white text-decoration-none">Categories</a></li>
+              <li><a href="#Products" class="text-white text-decoration-none">Products</a></li>
+              <li><a href="#Features" class="text-white text-decoration-none">Features</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Contact Us</h5>
+            <p>Email: support@grocerystore.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: 123, Fresh Street, Market City</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center bg-secondary py-2 mt-3">
+        <small>&copy; 2025 Grocery Store. All rights reserved.</small>
+      </div>
+    </footer>
+    </form>
+</body>
+</html>
